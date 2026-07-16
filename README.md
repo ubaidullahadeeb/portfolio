@@ -4,7 +4,7 @@ I'm a Flutter and Web Developer with an interest in AI automation and AI agents.
 
 ## Skills
 
-- Flutter
+- Flutter App Development
 - Web Development
 - AI Automation
 - AI Agents
