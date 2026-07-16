@@ -1,6 +1,6 @@
 # Ubaidullah Adeeb
 
-I'm a Flutter and Web Developer with an interest in AI automation and AI agents. I enjoy building mobile apps, websites, and automation workflows that solve real business problems.
+I'm a Flutter Apps and Web Developer with an interest in AI automation and AI agents. I enjoy building mobile apps, websites, and automation workflows that solve real business problems.
 
 ## Skills
 
@@ -32,5 +32,9 @@ AI-powered assistants and business automation projects.
 ## Contact
 
 Email: ubaidullahadeeb@Gmail.com
+
+WhatsApp: +92 328 7469050
+
+Direct Chat: https://wa.me/923287469050
 
 GitHub: https://github.com/ubaidullahadeeb
