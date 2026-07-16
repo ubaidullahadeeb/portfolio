@@ -31,6 +31,6 @@ AI-powered assistants and business automation projects.
 
 ## Contact
 
-Email: your@email.com
+Email: ubaidullahadeeb@Gmail.com
 
 GitHub: https://github.com/ubaidullahadeeb
