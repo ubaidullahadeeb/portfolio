@@ -37,4 +37,10 @@ WhatsApp: +92 328 7469050
 
 Direct Chat: https://wa.me/923287469050
 
+LinkedIn: https://www.linkedin.com/in/ubaidullahadeeb/
+
+Upwork: https://www.upwork.com/freelancers/~0111772a5638863da1?mp_source=share
+
+Facebook Page: https://web.facebook.com/profile.php?id=61582886354507
+
 GitHub: https://github.com/ubaidullahadeeb
