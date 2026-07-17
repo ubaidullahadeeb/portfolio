@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="FashionX - Your one-stop shop for the latest in men's and women's fashion. Discover trendy styles with amazing discounts.">
+    <meta name="keywords" content="fashion, clothing, men's fashion, women's fashion, accessories, online shopping">
+    <title>FashionX - New Fashion, New Style</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="top-bar-left">
+                    <i class="fas fa-shipping-fast"></i>
+                    <span>Free Shipping on Orders Over Rs. 5,000</span>
+                </div>
+                <div class="top-bar-right">
+                    <a href="#" class="me-3">Tеstlist Now</a>
+                    <a href="#" class="me-2">Search It $</a>
+                    <select class="currency-select">
+                        <option>Rs</option>
+                        <option>$</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="main-header">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <span class="brand-fashion">FASHION</span><span class="brand-x">X</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="shop.html">Shop</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="men.html">Men</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="women.html">Women</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="accessories.html">Accessories</a>
+                        </li>
+                        <li>
+                            <a href="quality.html" class="nav-link">Quality</a>
+                        </li>
+                    </ul>
+                    <div class="header-icons">
+                        <a href="#" class="icon-link"><i class="fas fa-search"></i></a>
+                        <a href="#" class="icon-link"><i class="fas fa-user"></i></a>
+                        <a href="cart.html" class="icon-link cart-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-badge" id="cartCount">0</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="hero-content">
+                        <h1 class="hero-title">
+                            New Fashion,<br>
+                            <span class="hero-subtitle">New Style</span>
+                        </h1>
+                        <p class="hero-description">Discover the latest trends with amazing discounts.</p>
+                        <a href="shop.html" class="btn btn-shop-now">
+                            Shop Now <i class="fas fa-chevron-right ms-2"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-image-container">
+                        <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=800&h=800&fit=crop" alt="Fashion Model" class="hero-main-image">
+                        <div class="floating-product floating-product-1">
+                            <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?w=200&h=200&fit=crop" alt="Sneakers" class="floating-img">
+                        </div>
+                        <div class="floating-product floating-product-2">
+                            <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=200&h=200&fit=crop" alt="Handbag" class="floating-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trending Products -->
+    <section class="trending-section">
+        <div class="container">
+            <h2 class="section-title">Trending Products</h2>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="product-card">
+                        <div class="product-badge badge-red">30% OFF</div>
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=400&h=400&fit=crop" alt="Premium Hoodie">
+                            <div class="product-overlay">
+                                <button class="btn btn-quick-view" onclick="viewProduct(1)">View Details <i class="fas fa-chevron-right ms-2"></i></button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Premium Hoodie</h3>
+                            <div class="product-price">
+                                <span class="price-new">Rs. 5,000</span>
+                            </div>
+                            <button class="btn btn-view-details" onclick="viewProduct(1)">
+                                View Details <i class="fas fa-chevron-right ms-2"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="product-card">
+                        <div class="product-badge badge-green">20% OFF</div>
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=400&h=400&fit=crop" alt="Stylish Dress">
+                            <div class="product-overlay">
+                                <button class="btn btn-quick-view" onclick="viewProduct(2)">View Details <i class="fas fa-chevron-right ms-2"></i></button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Stylish Dress</h3>
+                            <div class="product-price">
+                                <span class="price-old">Rs. 8,000</span>
+                                <span class="price-new">Rs. 6,400</span>
+                            </div>
+                            <button class="btn btn-view-details" onclick="viewProduct(2)">
+                                View Details <i class="fas fa-chevron-right ms-2"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="product-card">
+                        <div class="product-badge badge-orange">20% OFF</div>
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=400&h=400&fit=crop" alt="Leather Handbag">
+                            <div class="product-overlay">
+                                <button class="btn btn-quick-view" onclick="viewProduct(3)">View Details <i class="fas fa-chevron-right ms-2"></i></button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Leather Handbag</h3>
+                            <div class="product-price">
+                                <span class="price-old">Rs. 10,000</span>
+                                <span class="price-new">Rs. 8,000</span>
+                            </div>
+                            <button class="btn btn-view-details" onclick="viewProduct(3)">
+                                View Details <i class="fas fa-chevron-right ms-2"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-shipping-fast"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3>Free Shipping</h3>
+                            <p>On Orders Above Rs. 5,000</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3>24/7</h3>
+                            <p>Ready to Assist You</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-undo"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3>Easy Returns</h3>
+                            <p>Hassle-Free 7-Day Anytime</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3>Secure Payments</h3>
+                            <p>100% Secure with SSL</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-section">
+                        <h3 class="footer-logo">
+                            <span class="brand-fashion">FASHION</span><span class="brand-x">X</span>
+                        </h3>
+                        <p class="footer-description">Your one-stop shop for the latest in men's and women's fashion. Discover the trendiest style with unbeatable discounts.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <div class="footer-section">
+                        <h4>Quick Links</h4>
+                        <ul class="footer-links">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="shop.html">Shop</a></li>
+                            <li><a href="men.html">Men</a></li>
+                            <li><a href="women.html">Women</a></li>
+                            <li><a href="accessories.html">Accessories</a></li>
+                            <li><a href="quality.html">Quality</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-section">
+                        <h4>Customer Service</h4>
+                        <ul class="footer-links">
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                            <li><a href="contact.html">Shipping Policy</a></li>
+                            <li><a href="contact.html">Return Policy</a></li>
+                            <li><a href="contact.html">Privacy Policy</a></li>
+                            <li><a href="contact.html">Terms & Conditions</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-section">
+                        <h4>Newsletter</h4>
+                        <p>Subscribe to get latest news and discounts:</p>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Enter your email" required>
+                            <button type="submit">Subscribe</button>
+                        </form>
+                        <div class="payment-methods">
+                            <img src="https://img.icons8.com/color/48/visa.png" alt="Visa">
+                            <img src="https://img.icons8.com/color/48/mastercard.png" alt="Mastercard">
+                            <img src="https://img.icons8.com/color/48/paypal.png" alt="PayPal">
+                            <img src="https://img.icons8.com/color/48/bank-card-back-side.png" alt="Card">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Fairmart. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <span>|</span>
+                    <a href="#">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
