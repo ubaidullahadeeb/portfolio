@@ -1,0 +1,160 @@
+.tts-service-card {
+  background: #f5f1e8;
+  border-radius: 12px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: transform 0.2s;
+  position: relative;
+  height: 120px;
+  border: 2px solid transparent;
+}
+
+.tts-service-card:hover {
+  transform: translateY(-2px);
+  border-color: #e5e0d5;
+}
+
+.tts-service-image {
+  width: 76px;
+  height: 86px;
+  border-radius: 8px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.tts-service-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.tts-service-title {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0 0 2px 0;
+  color: #1a1a1a;
+}
+
+.tts-service-subtitle {
+  font-size: 11px;
+  color: #666;
+  margin: 0 0 4px 0;
+}
+
+.tts-price-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 4px;
+}
+
+.tts-original-price {
+  font-size: 11px;
+  color: #999;
+  text-decoration: line-through;
+}
+
+.tts-current-price {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.tts-rating-badge {
+  background: #0066cc;
+  color: white;
+  font-size: 8px;
+  padding: 1px 4px;
+  border-radius: 10px;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.tts-rating-badge::before {
+  content: "★";
+}
+.tts-quantity-control {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 80px;
+  justify-content: flex-end;
+}
+
+.tts-add-btn {
+  background: #1a1a1a;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: background 0.2s;
+  white-space: nowrap;
+}
+.tts-add-btn:hover {
+  background: #333;
+}
+
+.tts-add-btn .plus-icon {
+  font-size: 16px;
+  line-height: 1;
+}
+
+.tts-qty-btn {
+  width: 28px;
+  height: 28px;
+  background: #1a1a1a;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 18px;
+  font-weight: 400;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  line-height: 1;
+  transition: background 0.2s;
+  flex-shrink: 0;
+}
+
+.tts-qty-btn:hover {
+  background: #333;
+}
+.tts-qty-btn:active {
+  transform: scale(0.95);
+}
+.tts-qty-number {
+  font-size: 14px;
+  font-weight: 600;
+  min-width: 20px;
+  text-align: center;
+}
+
+/* ===============================
+   ONE-LINE TEXT WITH DOTS
+   =============================== */
+
+/* Service Heading (Title) */
+.tts-service-title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Service Subtitle */
+.tts-service-subtitle {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

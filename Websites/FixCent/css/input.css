@@ -1,0 +1,94 @@
+.complaint-section {
+  padding: 60px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.complaint-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.complaint-left {
+  flex: 1;
+}
+
+.complaint-left h2 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+.complaint-left p {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.5;
+}
+
+.complaint-right {
+  flex: 1.2;
+  background: #fff8ec;
+  padding: 25px;
+  border-radius: 4px;
+  box-shadow: 0 0 0 1px #ddd;
+}
+
+.form-row {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.form-row input {
+  flex: 1;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #000;
+  border-radius: 4px;
+  font-size: 14px;
+  outline: none;
+}
+
+textarea {
+  height: 160px;
+  resize: none;
+  margin-bottom: 20px;
+}
+
+button {
+  background: #0a5dc2;
+  color: #fff;
+  border: none;
+  padding: 10px 28px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+button:hover {
+  background: #084a9a;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .complaint-container {
+    flex-direction: column;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+
+  button {
+    float: none;
+    width: 100%;
+  }
+}

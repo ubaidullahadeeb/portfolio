@@ -1,0 +1,88 @@
+:root {
+    --bg-color: #000000;
+    --text-color: #cfd8dc;
+    --heading-color: #00aaff;
+    --accent-color: #00aaff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    color: var(--text-color);
+    line-height: 1.7;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px 80px;
+}
+
+h1 {
+    color: var(--heading-color);
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: var(--heading-color);
+    font-size: 20px;
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+h3 {
+    color: var(--heading-color);
+    font-size: 16px;
+    margin-top: 25px;
+    margin-bottom: 5px;
+}
+
+p {
+    margin-bottom: 12px;
+    font-size: 14.5px;
+    color: #000000;
+}
+
+ul {
+    margin: 10px 0 20px 20px;
+}
+
+ul li {
+    margin-bottom: 6px;
+    font-size: 14.5px;
+}
+
+li {
+    color: #000000;
+}
+
+.contact {
+    margin-top: 15px;
+    padding-left: 10px;
+    border-left: 2px solid var(--accent-color);
+}
+
+.contact p {
+    margin-bottom: 6px;
+}
+
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.divider {
+    height: 1px;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 40px 0;
+}

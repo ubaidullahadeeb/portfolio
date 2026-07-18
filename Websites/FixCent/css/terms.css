@@ -1,0 +1,82 @@
+:root {
+    --primary: #0077cc;
+    --text: #333333;
+    --heading: #111111;
+    --border: #e0e0e0;
+    --bg: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 40px 20px 80px;
+}
+
+h1 {
+    font-size: 30px;
+    color: var(--heading);
+    margin-bottom: 15px;
+}
+
+h2 {
+    font-size: 22px;
+    color: var(--primary);
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-size: 17px;
+    color: var(--heading);
+    margin-top: 25px;
+    margin-bottom: 6px;
+}
+
+p {
+    font-size: 15px;
+    margin-bottom: 12px;
+}
+
+ul {
+    margin: 10px 0 20px 22px;
+}
+
+ul li {
+    margin-bottom: 6px;
+    font-size: 15px;
+}
+li{
+    font-weight: bold;
+}
+
+.note {
+    padding: 15px;
+    border-left: 4px solid var(--primary);
+    background: #f7f9fb;
+    margin: 20px 0;
+}
+
+.contact {
+    margin-top: 10px;
+    padding-left: 12px;
+    border-left: 3px solid var(--primary);
+}
+
+.divider {
+    height: 1px;
+    background: var(--border);
+    margin: 40px 0;
+}
