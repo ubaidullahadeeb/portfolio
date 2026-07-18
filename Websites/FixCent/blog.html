@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="FIXO Blog - Expert tips, AC maintenance guides, and industry insights for keeping your air conditioning system in top condition.">
+    <title>AC Tips & Guides - FIXO Blog</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/footer.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top shadow-sm" style="background-color: #FFF8EC;">
+        <div class="container-fluid px-4">
+            <div class="d-flex align-items-center nav-top-row">
+                <a class="navbar-brand d-flex align-items-center fixcent-logo" href="index.html">
+                    <!-- Icon / Symbol -->
+                    <img src="images/Group 263.png" alt="FixCent Icon" class="fixcent-icon">
+                    <!-- Text -->
+                    <div class="logo-shadow text-dark " style="font-weight: bold;">
+                        <span class="fs-7">FixN</span><span class="fs-8">cent</span>
+                    </div>
+                </a>
+                <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center gap-3">
+                    <li class="nav-item"><a class="nav-link fw-500" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link fw-500" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link fw-500" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link fw-500" href="contact.html">Contact Us</a></li>
+                    <li class="nav-item"><a class="nav-link fw-500 active" href="blog.html">Blog</a></li>
+                    <li class="nav-item dropdown">
+                        <button
+                            class="btn btn-link dropdown-toggle d-flex align-items-center gap-1 text-dark text-decoration-none"
+                            type="button" id="cityDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+
+                            <!-- SVG Location Icon (100% reliable) -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                                <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z" />
+                                <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4z" />
+                            </svg>
+
+                            <span id="selectedCity">Lahore</span>
+                        </button>
+
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="cityDropdown">
+                            <li><a class="dropdown-item city-option" href="#">Lahore</a></li>
+                            <li><a class="dropdown-item city-option" href="#">Karachi</a></li>
+                            <li><a class="dropdown-item city-option" href="#">Islamabad</a></li>
+                            <li><a class="dropdown-item city-option" href="#">Faisalabad</a></li>
+                            <li><a class="dropdown-item city-option" href="#">Multan</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item me-2">
+                        <a href="#" class="nav-link p-0">
+                            <button class="btn btn-primary btn-sm cart-btn d-flex align-items-center gap-1"
+                                data-bs-toggle="modal" data-bs-target="#cartModal">
+
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-cart3" viewBox="0 0 16 16">
+                                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 
+                .49.598l-1.5 7A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.49-.402L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5z" />
+                                    <path d="M3.5 12a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm9 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
+                                </svg>
+
+                                <span class="d-none d-lg-inline">Cart</span>
+                            </button>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="login.html" class="nav-link"><button class="btn btn-primary btn-sm text-white">Login /
+                                Signup</button></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="modal fade" id="cartModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg modal-fullscreen-sm-down">
+            <div class="modal-content cart-modal">
+
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bold">🛒 Select Items</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+
+                    <!-- Search -->
+                    <input type="text" id="cartSearchInput" class="form-control mb-3" placeholder="Search items...">
+
+                    <!-- Items -->
+                    <div class="row g-3">
+
+                        <div class="col-md-6 cart-item-wrap">
+                            <label class="cart-item-tile">
+                                <span>AC Services</span>
+                                <img src="images/2.png" alt="">
+                                <input type="checkbox">
+                            </label>
+                        </div>
+
+                        <div class="col-md-6 cart-item-wrap">
+                            <label class="cart-item-tile">
+                                <span>Geyser Services</span>
+                                <img src="images/4.png" alt="">
+                                <input type="checkbox">
+                            </label>
+                        </div>
+
+                        <div class="col-md-6 cart-item-wrap">
+                            <label class="cart-item-tile">
+
+                                <span>Electrician Services</span>
+                                <img src="images/3.png" alt="">
+                                <input type="checkbox">
+                            </label>
+                        </div>
+
+                        <div class="col-md-6 cart-item-wrap">
+                            <label class="cart-item-tile">
+
+                                <span>Plumber Services</span>
+                                <img src="images/5.png" alt="">
+                                <input type="checkbox">
+                            </label>
+                        </div>
+
+                        <div class="col-md-6 cart-item-wrap">
+                            <label class="cart-item-tile">
+                                <span>Handyman</span>
+                                <img src="images/6.png" alt="">
+                                <input type="checkbox">
+                            </label>
+                        </div>
+
+                        <div class="col-md-6 cart-item-wrap">
+                            <label class="cart-item-tile">
+                                <span>Carpenter Services</span>
+                                <img src="images/7.png" alt="">
+                                <input type="checkbox">
+                            </label>
+                        </div>
+
+                        <div class="col-md-6 cart-item-wrap">
+                            <label class="cart-item-tile">
+
+                                <span>Painter Services</span>
+                                <img src="images/servicesi/Rectangle 181.png" alt="">
+                                <input type="checkbox">
+                            </label>
+                        </div>
+
+                        <div class="col-md-6 cart-item-wrap">
+                            <label class="cart-item-tile">
+
+                                <span>Past Control</span>
+                                <img src="images/home-s/Rectangle 116.png" alt="">
+                                <input type="checkbox">
+                            </label>
+                        </div>
+                        <div class="col-md-6 cart-item-wrap">
+                            <label class="cart-item-tile">
+                                <span>Appliance Services</span>
+                                <img src="images/servicesi/Rectangle 125.png" alt="">
+                                <input type="checkbox">
+                            </label>
+                        </div>
+
+                        <div class="col-md-6 cart-item-wrap">
+                            <label class="cart-item-tile">
+                                <span>Explain Complain</span>
+                                <img src="images/servicesi/young-bearded-handsome-builder-wearing-construction-uniform-cap-standing-with-arms-crossed-self-confident-smiling-isolated-orange-wall 1.png"
+                                    alt="">
+                                <input type="checkbox">
+                            </label>
+                        </div>
+                        <div class="col-md-6 cart-item-wrap">
+                            <label class="cart-item-tile">
+                                <span>Deep Cleaning Services</span>
+                                <img src="images/servicesi/Rectangle 88.png" alt="">
+                                <input type="checkbox">
+                            </label>
+                        </div>
+
+                        <div class="col-md-6 cart-item-wrap">
+                            <label class="cart-item-tile">
+                                <span>Inspection Services</span>
+                                <img src="images/servicesi/Rectangle 183.png" alt="">
+                                <input type="checkbox">
+                            </label>
+                        </div>
+
+                        <div class="col-md-6 cart-item-wrap">
+                            <label class="cart-item-tile">
+
+                                <span>Waterproofing Services</span>
+                                <img src="images/home-s/membranes 1.png" alt="">
+                                <input type="checkbox">
+                            </label>
+                        </div>
+
+                        <div class="col-md-6 cart-item-wrap">
+                            <label class="cart-item-tile">
+
+                                <span>It Networking Services</span>
+                                <img src="images/itNetwork-s/CCTV Installation 1.png" alt="">
+                                <input type="checkbox">
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="modal-footer">
+                    <button class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button class="btn btn-primary">Proceed</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Blog Hero Section -->
+    <section class="blog-hero bg-primary text-white py-2">
+        <div class="container-fluid px-4">
+            <div class="row align-items-center py-5">
+                <div class="col-lg-8 fade-in-left">
+                    <h1 class="display-4 fw-bold mb-3">AC Tips & Guides</h1>
+                    <p class="lead mb-0">Expert advice and insights to keep your AC system running efficiently
+                        year-round</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Category Filter -->
+    <section class="py-4 bg-light sticky-sm-top">
+        <div class="container-fluid px-4">
+            <div class="d-flex gap-2 overflow-x-auto flex-wrap">
+                <button class="btn btn-primary btn-sm blog-filter-btn active" data-filter="all">All Posts</button>
+                <button class="btn btn-outline-primary btn-sm blog-filter-btn"
+                    data-filter="maintenance">Maintenance</button>
+                <button class="btn btn-outline-primary btn-sm blog-filter-btn" data-filter="repair">Repair Tips</button>
+                <button class="btn btn-outline-primary btn-sm blog-filter-btn"
+                    data-filter="efficiency">Efficiency</button>
+                <button class="btn btn-outline-primary btn-sm blog-filter-btn" data-filter="seasonal">Seasonal
+                    Care</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Posts Grid -->
+    <section class="py-5">
+        <div class="container-fluid px-4">
+            <!-- Featured Post -->
+            <div class="row mb-5 fade-in-up">
+                <div class="col-lg-8">
+                    <div class="blog-featured-card">
+                        <div class="featured-img"
+                            style="background: linear-gradient(135deg, #0066cc 0%, #003d99 100%); height: 400px; border-radius: 12px; display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
+                            <i class="fas fa-snowflake"></i>
+                        </div>
+                        <div class="mt-4">
+                            <div class="d-flex gap-2 mb-2">
+                                <span class="badge bg-primary">Maintenance</span>
+                                <span class="text-muted small">Dec 20, 2025</span>
+                            </div>
+                            <h2 class="display-6 fw-bold mb-3">Complete Guide to Summer AC Maintenance</h2>
+                            <p class="lead text-muted">Learn the essential maintenance steps to keep your AC running
+                                smoothly during peak summer season. From filter cleaning to refrigerant checks, we cover
+                                everything you need to know to maintain optimal cooling performance.</p>
+                            <a href="#" class="btn btn-primary btn-lg fw-bold">Read More <i
+                                    class="fas fa-arrow-right ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="blog-stats-card p-4 bg-light rounded-3">
+                        <h5 class="fw-bold mb-4">Blog Statistics</h5>
+                        <div class="mb-4">
+                            <h3 class="text-primary fw-bold">150+</h3>
+                            <p class="text-muted small">Expert Articles</p>
+                        </div>
+                        <div class="mb-4">
+                            <h3 class="text-primary fw-bold">50K+</h3>
+                            <p class="text-muted small">Monthly Readers</p>
+                        </div>
+                        <div>
+                            <h3 class="text-primary fw-bold">98%</h3>
+                            <p class="text-muted small">Reader Satisfaction</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Blog Grid -->
+            <div class="row g-4" id="blogGrid">
+                <!-- Maintenance Post 1 -->
+                <div class="col-lg-4 col-md-6 fade-in-up blog-post" data-category="maintenance"
+                    style="animation-delay: 0.1s;">
+                    <div class="blog-card h-100">
+                        <div class="blog-img"
+                            style="background: linear-gradient(135deg, #0099ff 0%, #0066cc 100%); height: 200px; border-radius: 12px 12px 0 0; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem;">
+                            <i class="fas fa-filter"></i>
+                        </div>
+                        <div class="p-4">
+                            <div class="d-flex gap-2 mb-2">
+                                <span class="badge bg-primary">Maintenance</span>
+                                <span class="text-muted small">Dec 15, 2025</span>
+                            </div>
+                            <h5 class="fw-bold mb-3">AC Filter: When and How to Replace</h5>
+                            <p class="text-muted small mb-4">Discover the importance of regular filter replacement and
+                                how it improves air quality and system efficiency.</p>
+                            <a href="#" class="btn btn-outline-primary btn-sm">Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Repair Post 1 -->
+                <div class="col-lg-4 col-md-6 fade-in-up blog-post" data-category="repair"
+                    style="animation-delay: 0.2s;">
+                    <div class="blog-card h-100">
+                        <div class="blog-img"
+                            style="background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%); height: 200px; border-radius: 12px 12px 0 0; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem;">
+                            <i class="fas fa-wrench"></i>
+                        </div>
+                        <div class="p-4">
+                            <div class="d-flex gap-2 mb-2">
+                                <span class="badge bg-danger">Repair Tips</span>
+                                <span class="text-muted small">Dec 12, 2025</span>
+                            </div>
+                            <h5 class="fw-bold mb-3">Common AC Problems and Quick Fixes</h5>
+                            <p class="text-muted small mb-4">Learn to identify common AC issues like strange noises,
+                                weak cooling, and water leaks with our troubleshooting guide.</p>
+                            <a href="#" class="btn btn-outline-primary btn-sm">Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Efficiency Post 1 -->
+                <div class="col-lg-4 col-md-6 fade-in-up blog-post" data-category="efficiency"
+                    style="animation-delay: 0.3s;">
+                    <div class="blog-card h-100">
+                        <div class="blog-img"
+                            style="background: linear-gradient(135deg, #4ecdc4 0%, #44a08d 100%); height: 200px; border-radius: 12px 12px 0 0; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem;">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <div class="p-4">
+                            <div class="d-flex gap-2 mb-2">
+                                <span class="badge bg-success">Efficiency</span>
+                                <span class="text-muted small">Dec 10, 2025</span>
+                            </div>
+                            <h5 class="fw-bold mb-3">Save Energy: AC Efficiency Tips</h5>
+                            <p class="text-muted small mb-4">Expert strategies to reduce your AC energy consumption and
+                                lower electricity bills without compromising comfort.</p>
+                            <a href="#" class="btn btn-outline-primary btn-sm">Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Seasonal Post 1 -->
+                <div class="col-lg-4 col-md-6 fade-in-up blog-post" data-category="seasonal"
+                    style="animation-delay: 0.4s;">
+                    <div class="blog-card h-100">
+                        <div class="blog-img"
+                            style="background: linear-gradient(135deg, #ffa500 0%, #ff8c42 100%); height: 200px; border-radius: 12px 12px 0 0; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem;">
+                            <i class="fas fa-sun"></i>
+                        </div>
+                        <div class="p-4">
+                            <div class="d-flex gap-2 mb-2">
+                                <span class="badge bg-warning">Seasonal Care</span>
+                                <span class="text-muted small">Dec 5, 2025</span>
+                            </div>
+                            <h5 class="fw-bold mb-3">Preparing Your AC for Summer Season</h5>
+                            <p class="text-muted small mb-4">Pre-summer maintenance checklist to ensure your AC is ready
+                                for the hot months ahead.</p>
+                            <a href="#" class="btn btn-outline-primary btn-sm">Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Maintenance Post 2 -->
+                <div class="col-lg-4 col-md-6 fade-in-up blog-post" data-category="maintenance"
+                    style="animation-delay: 0.5s;">
+                    <div class="blog-card h-100">
+                        <div class="blog-img"
+                            style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); height: 200px; border-radius: 12px 12px 0 0; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem;">
+                            <i class="fas fa-wind"></i>
+                        </div>
+                        <div class="p-4">
+                            <div class="d-flex gap-2 mb-2">
+                                <span class="badge bg-primary">Maintenance</span>
+                                <span class="text-muted small">Nov 28, 2025</span>
+                            </div>
+                            <h5 class="fw-bold mb-3">How to Clean AC Ducts Properly</h5>
+                            <p class="text-muted small mb-4">Step-by-step guide to cleaning your AC ducts and
+                                maintaining healthy indoor air quality.</p>
+                            <a href="#" class="btn btn-outline-primary btn-sm">Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Repair Post 2 -->
+                <div class="col-lg-4 col-md-6 fade-in-up blog-post" data-category="repair"
+                    style="animation-delay: 0.6s;">
+                    <div class="blog-card h-100">
+                        <div class="blog-img"
+                            style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); height: 200px; border-radius: 12px 12px 0 0; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem;">
+                            <i class="fas fa-hammer-wrench"></i>
+                        </div>
+                        <div class="p-4">
+                            <div class="d-flex gap-2 mb-2">
+                                <span class="badge bg-danger">Repair Tips</span>
+                                <span class="text-muted small">Nov 20, 2025</span>
+                            </div>
+                            <h5 class="fw-bold mb-3">Understanding AC Refrigerant Leaks</h5>
+                            <p class="text-muted small mb-4">Know the signs of refrigerant leaks and why professional
+                                repair is essential for your system.</p>
+                            <a href="#" class="btn btn-outline-primary btn-sm">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Load More Button -->
+            <div class="text-center mt-5 fade-in-up">
+                <button class="btn btn-primary btn-lg fw-bold">Load More Articles</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="py-5 bg-primary text-white" style="background-color:antiquewhite;">
+        <div class="container-fluid px-4">
+            <div class="row justify-content-center text-center fade-in-up">
+                <div class="col-lg-6">
+                    <h2 class="display-6 fw-bold mb-3" style="color: black;">Subscribe to Our Blog</h2>
+                    <p class="lead mb-4">Get the latest AC tips, maintenance guides, and industry insights delivered to
+                        your inbox every week.</p>
+                    <div class="input-group input-group-lg">
+                        <input type="email" class="form-control" placeholder="Enter your email address">
+                        <button class="btn btn-light fw-bold">Subscribe</button>
+                    </div>
+                    <small class="text-white-50 mt-2 d-block">No spam. Unsubscribe anytime.</small>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-5">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h6 class="footer-title">Services</h6>
+                    <ul class="footer-list">
+                        <li><a href="#">Maintenance Services</a></li>
+                        <li><a href="cservices.html">Construction Services</a></li>
+                        <li><a href="architects.html">Architect Services</a></li>
+                        <li><a href="inspactions.html">Inspection Services</a></li>
+                        <li><a href="itnetworkings.html">IT Networking Services</a></li>
+                        <li><a href="waterproofings.html">Waterproofing Services</a></li>
+                        <li><a href="cleanings.html">Cleaning Services</a></li>
+                        <li><a href="appliances.html">Appliances Services</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h6 class="footer-title">Available Cities</h6>
+                    <ul class="footer-list">
+                        <li><a href="#">Lahore</a></li>
+                        <li><a href="#">Karachi</a></li>
+                        <li><a href="#">Islamabad</a></li>
+                        <li><a href="#">Rawalpindi</a></li>
+                        <li><a href="#">Peshawar</a></li>
+                        <li><a href="#">Faisalabad</a></li>
+                        <li><a href="#">Multan</a></li>
+                        <li><a href="#">Sialkot</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h6 class="footer-title">Main Menu</h6>
+                    <ul class="footer-list">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="privacyp.html">Privacy Policy</a></li>
+                        <li><a href="termsc.html">Terms & Conditions</a></li>
+                        <li><a href="faqs.html">FAQs</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h6 class="footer-title">Contact Us</h6>
+                    <ul class="footer-list">
+                        <li><a href="tel:+923001234567"><i class="fas fa-phone"></i> 0300-1234567</a></li>
+                        <li><a href="mailto:info@fixcent.com"><i class="fas fa-envelope"></i> info@fixcent.com</a></li>
+                        <li><a href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+                        <li><a href="#"><i class="fab fa-pinterest"></i> Pinterest</a></li>
+                        <li><a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                        <li><a href="#"><i class="fab fa-youtube"></i> YouTube</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr class="footer-divider">
+            <div class="text-center pt-4">
+                <p class="text-muted">&copy; 2026 FixNcent. All rights reserved. | Crafted with <i
+                        class="fas fa-heart"></i> by FixNcent Team</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('cartSearchInput').addEventListener('keyup', function () {
+            const value = this.value.toLowerCase();
+
+            document.querySelectorAll('.cart-item-wrap').forEach(item => {
+                item.style.display = item.innerText.toLowerCase().includes(value)
+                    ? 'block'
+                    : 'none';
+            });
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/blog.js"></script>
+</body>
+
+</html>

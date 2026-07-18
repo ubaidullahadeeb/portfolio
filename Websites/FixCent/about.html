@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="About FIXO - Learn about our mission to connect customers with expert AC technicians in Lahore.">
+    <title>About FIXO - AC Services Platform</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/footer.css">
+
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top shadow-sm" style="background-color: #FFF8EC;">
+        <div class="container-fluid px-4">
+            <div class="d-flex align-items-center nav-top-row">
+                <a class="navbar-brand d-flex align-items-center fixcent-logo" href="index.html">
+                    <!-- Icon / Symbol -->
+                    <img src="images/Group 263.png" alt="FixCent Icon" class="fixcent-icon">
+                    <!-- Text -->
+                    <div class="logo-shadow text-dark " style="font-weight: bold;">
+                        <span class="fs-7">FixN</span><span class="fs-8">cent</span>
+                    </div>
+                </a>
+                <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center gap-3">
+                    <li class="nav-item"><a class="nav-link fw-500" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link fw-500 active" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link fw-500" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link fw-500" href="contact.html">Contact Us</a></li>
+                    <li class="nav-item"><a class="nav-link fw-500" href="blog.html">Blog</a></li>
+                    <li class="nav-item dropdown">
+                        <button
+                            class="btn btn-link dropdown-toggle d-flex align-items-center gap-1 text-dark text-decoration-none"
+                            type="button" id="cityDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+
+                            <!-- SVG Location Icon (100% reliable) -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                                <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z" />
+                                <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4z" />
+                            </svg>
+
+                            <span id="selectedCity">Lahore</span>
+                        </button>
+
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="cityDropdown">
+                            <li><a class="dropdown-item city-option" href="#">Lahore</a></li>
+                            <li><a class="dropdown-item city-option" href="#">Karachi</a></li>
+                            <li><a class="dropdown-item city-option" href="#">Islamabad</a></li>
+                            <li><a class="dropdown-item city-option" href="#">Faisalabad</a></li>
+                            <li><a class="dropdown-item city-option" href="#">Multan</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item me-2">
+                        <a href="#" class="nav-link p-0">
+                            <button class="btn btn-primary btn-sm cart-btn d-flex align-items-center gap-1"
+                                data-bs-toggle="modal" data-bs-target="#cartModal">
+
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-cart3" viewBox="0 0 16 16">
+                                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 
+                .49.598l-1.5 7A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.49-.402L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5z" />
+                                    <path d="M3.5 12a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm9 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
+                                </svg>
+
+                                <span class="d-none d-lg-inline">Cart</span>
+                            </button>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="login.html" class="nav-link"><button class="btn btn-primary btn-sm text-white">Login /
+                                Signup</button></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="modal fade" id="cartModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg modal-fullscreen-sm-down">
+            <div class="modal-content cart-modal">
+
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bold">🛒 Select Items</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+
+                    <!-- Search -->
+                    <input type="text" id="cartSearchInput" class="form-control mb-3" placeholder="Search items...">
+
+                    <!-- Items -->
+                    <div class="row g-3">
+
+                        <div class="col-md-6 cart-item-wrap">
+                            <label class="cart-item-tile">
+                                <span>AC Services</span>
+                                <img src="images/2.png" alt="">
+                                <input type="checkbox">
+                            </label>
+                        </div>
+
+                        <div class="col-md-6 cart-item-wrap">
+                            <label class="cart-item-tile">
+                                <span>Geyser Services</span>
+                                <img src="images/4.png" alt="">
+                                <input type="checkbox">
+                            </label>
+                        </div>
+
+                        <div class="col-md-6 cart-item-wrap">
+                            <label class="cart-item-tile">
+
+                                <span>Electrician Services</span>
+                                <img src="images/3.png" alt="">
+                                <input type="checkbox">
+                            </label>
+                        </div>
+
+                        <div class="col-md-6 cart-item-wrap">
+                            <label class="cart-item-tile">
+
+                                <span>Plumber Services</span>
+                                <img src="images/5.png" alt="">
+                                <input type="checkbox">
+                            </label>
+                        </div>
+
+                        <div class="col-md-6 cart-item-wrap">
+                            <label class="cart-item-tile">
+                                <span>Handyman</span>
+                                <img src="images/6.png" alt="">
+                                <input type="checkbox">
+                            </label>
+                        </div>
+
+                        <div class="col-md-6 cart-item-wrap">
+                            <label class="cart-item-tile">
+                                <span>Carpenter Services</span>
+                                <img src="images/7.png" alt="">
+                                <input type="checkbox">
+                            </label>
+                        </div>
+
+                        <div class="col-md-6 cart-item-wrap">
+                            <label class="cart-item-tile">
+
+                                <span>Painter Services</span>
+                                <img src="images/servicesi/Rectangle 181.png" alt="">
+                                <input type="checkbox">
+                            </label>
+                        </div>
+
+                        <div class="col-md-6 cart-item-wrap">
+                            <label class="cart-item-tile">
+
+                                <span>Past Control</span>
+                                <img src="images/home-s/Rectangle 116.png" alt="">
+                                <input type="checkbox">
+                            </label>
+                        </div>
+                        <div class="col-md-6 cart-item-wrap">
+                            <label class="cart-item-tile">
+                                <span>Appliance Services</span>
+                                <img src="images/servicesi/Rectangle 125.png" alt="">
+                                <input type="checkbox">
+                            </label>
+                        </div>
+
+                        <div class="col-md-6 cart-item-wrap">
+                            <label class="cart-item-tile">
+                                <span>Explain Complain</span>
+                                <img src="images/servicesi/young-bearded-handsome-builder-wearing-construction-uniform-cap-standing-with-arms-crossed-self-confident-smiling-isolated-orange-wall 1.png"
+                                    alt="">
+                                <input type="checkbox">
+                            </label>
+                        </div>
+                        <div class="col-md-6 cart-item-wrap">
+                            <label class="cart-item-tile">
+                                <span>Deep Cleaning Services</span>
+                                <img src="images/servicesi/Rectangle 88.png" alt="">
+                                <input type="checkbox">
+                            </label>
+                        </div>
+
+                        <div class="col-md-6 cart-item-wrap">
+                            <label class="cart-item-tile">
+                                <span>Inspection Services</span>
+                                <img src="images/servicesi/Rectangle 183.png" alt="">
+                                <input type="checkbox">
+                            </label>
+                        </div>
+
+                        <div class="col-md-6 cart-item-wrap">
+                            <label class="cart-item-tile">
+
+                                <span>Waterproofing Services</span>
+                                <img src="images/home-s/membranes 1.png" alt="">
+                                <input type="checkbox">
+                            </label>
+                        </div>
+
+                        <div class="col-md-6 cart-item-wrap">
+                            <label class="cart-item-tile">
+
+                                <span>It Networking Services</span>
+                                <img src="images/itNetwork-s/CCTV Installation 1.png" alt="">
+                                <input type="checkbox">
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="modal-footer">
+                    <button class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button class="btn btn-primary">Proceed</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- About Hero Section -->
+    <section class="about-hero bg-primary text-white">
+        <div class="container-fluid px-4">
+            <div class="row">
+                <div class="col-lg-8">
+                    <h1 class="display-4 fw-bold mb-3 fade-in-left">About Us</h1>
+                    <p class="lead fade-in-left" style="animation-delay: 0.1s;">Expert AC technicians for installation,
+                        cleaning, repairing, and complete system checkups.</p>
+                    <div class="row g-3 mt-4">
+                        <div class="col-md-6 fade-in-up" style="animation-delay: 0.2s;">
+                            <div class="bg-white bg-opacity-10 p-3 rounded-2">
+                                <i class="fas fa-star me-2"></i>
+                                <span class="fw-bold">4.5/5</span>
+                                <p class="text-white-50 small mb-0">Average rating</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 fade-in-up" style="animation-delay: 0.3s;">
+                            <div class="bg-white bg-opacity-10 p-3 rounded-2">
+                                <i class="fas fa-check-circle me-2"></i>
+                                <span class="fw-bold">60233+</span>
+                                <p class="text-white-50 small mb-0">Completed Orders</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Who Is FIXO Section -->
+    <section class="py-5 bg-light">
+        <div class="container-fluid px-4">
+            <div class="row mb-5">
+                <div class="col-lg-10 mx-auto">
+                    <h4 class=" mb-4 fade-in-up" style="color: #0066cc;">Who is FIXNCENT?</h4>
+                    <p class="lead text-muted fade-in-up" style="animation-delay: 0.1s;">FIXNCENT is a leading Lahore &
+                        Kasur–based service platform that connects customers with skilled, verified professionals for a
+                        wide range of home and commercial services.</p>
+                    <p class="text-muted fade-in-up" style="animation-delay: 0.2s;">Our mission is to simplify everyday
+                        life by offering a fast, reliable, and transparent way to book expert services—right at your
+                        doorstep.
+                        Through our easy-to-use website and mobile app, FIXNCENT brings convenience, trust, and
+                        efficiency together, ensuring customers receive quality services without stress or delays.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FIXO Website & App Section -->
+    <section>
+        <div class="container-fluid px-4">
+            <div class="row mb-5">
+                <div class="col-lg-10 mx-auto">
+                    <h4 class=" mb-4 fade-in-up" style="color: #0066cc;">FIXNCENT Website & App</h4>
+                    <p class="lead text-muted fade-in-up" style="animation-delay: 0.1s;">The FIXNCENT digital platforms
+                        are designed to make service booking simple, quick, and hassle-free. With just a few taps,
+                        customers can schedule services ranging from maintenance to construction support, while
+                        enjoying:</p>
+                    <ul>
+                        <li class="list-item">Clear and upfront pricing</li>
+                        <li class="list-item">Verified service professionals</li>
+                        <li class="list-item">Consistent service quality</li>
+                        <li class="list-item">Reliable delivery standards</li>
+                    </ul>
+                    <p class="text-muted fade-in-up" style="animation-delay: 0.2s;">Whether you’re managing your home or
+                        workplace, FIXNCENT guarantees a smooth and dependable service experience every time.
+                        FIXNCENT Partner App
+                        To empower our service providers, the FIXNCENT Partner App enables skilled technicians to join
+                        the platform after a proper verification process.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FIXO Partner App Section -->
+    <section class="bg-light">
+        <div class="container-fluid px-4">
+            <div class="row mb-5">
+                <div class="col-lg-10 mx-auto">
+                    <h4 class=" mb-4 fade-in-up" style="color: #0066cc;">We support our partners through:</h4>
+                    <ul>
+                        <li class="list-item">Professional training sessions</li>
+                        <li class="list-item">Performance guidance</li>
+                        <li class="list-item">Ongoing operational support</li>
+                    </ul>
+                    <p class="lead text-muted fade-in-up" style="animation-delay: 0.1s;">This system helps technicians
+                        access regular job opportunities, build trust with customers, and earn a stable, sustainable
+                        income.
+                        Our Mission of Empowerment
+                        At FIXNCENT, we are committed to creating strong earning opportunities for local technicians
+                        across Lahore and Kasur.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission of Empowerment Section -->
+    <section>
+        <div class="container-fluid px-4">
+            <div class="row mb-5">
+                <div class="col-lg-10 mx-auto">
+                    <h4 class="mb-4 fade-in-up" style="color: #0066cc;">By onboarding professionals through a structured
+                        system and ensuring continuous job flow, we help them:</h4>
+                    <p class="lead text-muted fade-in-up" style="animation-delay: 0.1s;">At FIXO, we aim to create
+                        strong earning opportunities for local technicians across Lahore. By onboarding professionals
+                        through a structured process, providing training, and ensuring consistent job flow, we help them
+                        enhance their skills and deliver excellent service.</p>
+                    <p class="text-muted fade-in-up" style="animation-delay: 0.2s;">We follow strict operational
+                        standards, ensuring that customers receive top-tier service while our partners gain stability,
+                        respect, and growth in their profession.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-light">
+        <div class="container-fluid px-4">
+            <div class="row mb-5">
+                <div class="col-lg-10 mx-auto">
+                    <h4 class=" mb-4 fade-in-up" style="color: #0066cc;">FIXNCENT offers a wide range of services in
+                        Lahore and Kasur, including:
+                    </h4>
+                    <ul>
+                        <li class="list-item">Maintenance Services</li>
+                        <li class="list-item">Construction Services</li>
+                        <li class="list-item">Architect Services</li>
+                        <li class="list-item">Inspection Services</li>
+                        <li class="list-item">IT & Networking</li>
+                        <li class="list-item">Waterproofing</li>
+                        <li class="list-item">Cleaning Services</li>
+                        <li class="list-item">AC Services</li>
+                        <li class="list-item">Electrician Services</li>
+                        <li class="list-item">Geyser Services</li>
+                        <li class="list-item">Plumber Services</li>
+                        <li class="list-item">Handyman Services</li>
+                        <li class="list-item">Carpenter Services</li>
+                        <li class="list-item">Painter Services</li>
+                        <li class="list-item">Home Appliances Repair</li>
+                    </ul>
+                    <p class="lead text-muted fade-in-up" style="animation-delay: 0.1s;">We continuously expand our
+                        service portfolio to meet the evolving needs of our customers.
+                        Our Growth & Journey
+                        Since our launch, FIXNCENT has steadily grown its customer base and professional network across
+                        Lahore and Kasur.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission of Empowerment Section -->
+    <section class="py-5">
+        <div class="container-fluid px-4">
+            <div class="row mb-5">
+                <div class="col-lg-10 mx-auto">
+                    <h4 class="mb-4 fade-in-up" style="color: #0066cc;">Our progress is reflected in:</h4>
+                    <ul>
+                        <li class="list-item">A growing number of verified service professionals</li>
+                        <li class="list-item">Increasing monthly service bookings</li>
+                        <li class="list-item">A loyal customer community trusting FIXNCENT</li>
+                        <li class="list-item">Continuous improvements in technology and customer experience</li>
+                    </ul>
+                    <p class="text-muted fade-in-up" style="color: black; font-weight: bold;">
+                        Quality, reliability, and customer satisfaction remain at the heart of everything we do.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="">
+        <div class="container-fluid px-4">
+            <div class="row mb-5">
+                <div class="col-lg-10 mx-auto">
+                    <h4 class="mb-4 fade-in-up" style="color: #0066cc;">Why Choose FIXNCENT?</h4>
+                    <ul>
+                        <li class="list-item">Verified & trained professionals</li>
+                        <li class="list-item">Transparent pricing</li>
+                        <li class="list-item">On-time service delivery</li>
+                        <li class="list-item">High service standards</li>
+                        <li class="list-item">Dedicated customer support</li>
+                    </ul>
+                    <p class="text-muted fade-in-up" style="color: black; font-weight: bold;">
+                        FIXNCENT is here to make everyday tasks easier—one reliable service at a time.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Services Section -->
+    <section class="bg-light">
+        <div class="container-fluid px-4">
+            <div class="text-center mb-5 fade-in-up">
+                <h2 class="display-5 fw-bold mb-2">Our Services</h2>
+            </div>
+
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-4 col-md-6 fade-in-up" style="animation-delay: 0.1s;">
+                    <div class="service-info-card p-4 h-100">
+                        <div class="icon-circle mb-3">
+                            <i class="fas fa-tools text-primary fa-2x"></i>
+                        </div>
+                        <h5 class="fw-bold mb-2">Maintenance Services</h5>
+                        <p class="text-muted small">Regular maintenance, repairs, and preventive care for all AC
+                            systems.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 fade-in-up" style="animation-delay: 0.2s;">
+                    <div class="service-info-card p-4 h-100">
+                        <div class="icon-circle mb-3">
+                            <i class="fas fa-hammer text-primary fa-2x"></i>
+                        </div>
+                        <h5 class="fw-bold mb-2">Construction Services</h5>
+                        <p class="text-muted small">Professional construction support and installation of AC systems.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 fade-in-up" style="animation-delay: 0.3s;">
+                    <div class="service-info-card p-4 h-100">
+                        <div class="icon-circle mb-3">
+                            <i class="fas fa-pencil-ruler text-primary fa-2x"></i>
+                        </div>
+                        <h5 class="fw-bold mb-2">Architect Services</h5>
+                        <p class="text-muted small">Professional consultation and design services for AC placement and
+                            layout.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 fade-in-up" style="animation-delay: 0.4s;">
+                    <div class="service-info-card p-4 h-100">
+                        <div class="icon-circle mb-3">
+                            <i class="fas fa-clipboard-check text-primary fa-2x"></i>
+                        </div>
+                        <h5 class="fw-bold mb-2">Inspection Services</h5>
+                        <p class="text-muted small">Complete system inspection and health reports for optimal
+                            performance.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-5">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h6 class="footer-title">Services</h6>
+                    <ul class="footer-list">
+                        <li><a href="#">Maintenance Services</a></li>
+                        <li><a href="cservices.html">Construction Services</a></li>
+                        <li><a href="architects.html">Architect Services</a></li>
+                        <li><a href="inspactions.html">Inspection Services</a></li>
+                        <li><a href="itnetworkings.html">IT Networking Services</a></li>
+                        <li><a href="waterproofings.html">Waterproofing Services</a></li>
+                        <li><a href="cleanings.html">Cleaning Services</a></li>
+                        <li><a href="appliances.html">Appliances Services</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h6 class="footer-title">Available Cities</h6>
+                    <ul class="footer-list">
+                        <li><a href="#">Lahore</a></li>
+                        <li><a href="#">Karachi</a></li>
+                        <li><a href="#">Islamabad</a></li>
+                        <li><a href="#">Rawalpindi</a></li>
+                        <li><a href="#">Peshawar</a></li>
+                        <li><a href="#">Faisalabad</a></li>
+                        <li><a href="#">Multan</a></li>
+                        <li><a href="#">Sialkot</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h6 class="footer-title">Main Menu</h6>
+                    <ul class="footer-list">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="privacyp.html">Privacy Policy</a></li>
+                        <li><a href="termsc.html">Terms & Conditions</a></li>
+                        <li><a href="faqs.html">FAQs</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h6 class="footer-title">Contact Us</h6>
+                    <ul class="footer-list">
+                        <li><a href="tel:+923001234567"><i class="fas fa-phone"></i> 0300-1234567</a></li>
+                        <li><a href="mailto:info@fixcent.com"><i class="fas fa-envelope"></i> info@fixcent.com</a></li>
+                        <li><a href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+                        <li><a href="#"><i class="fab fa-pinterest"></i> Pinterest</a></li>
+                        <li><a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                        <li><a href="#"><i class="fab fa-youtube"></i> YouTube</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr class="footer-divider">
+            <div class="text-center pt-4">
+                <p class="text-muted">&copy; 2026 FixNcent. All rights reserved. | Crafted with <i
+                        class="fas fa-heart"></i> by FixNcent Team</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('cartSearchInput').addEventListener('keyup', function () {
+            const value = this.value.toLowerCase();
+
+            document.querySelectorAll('.cart-item-wrap').forEach(item => {
+                item.style.display = item.innerText.toLowerCase().includes(value)
+                    ? 'block'
+                    : 'none';
+            });
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

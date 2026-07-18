@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FixCent - Service Booking Admin Dashboard</title>
+  <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Sidebar -->
+    <aside id="sidebar" class="sidebar">
+      <div class="sidebar-header">
+        <div class="logo">FIX CENT</div>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="dashboard.html" class="nav-item active">
+          <span class="nav-icon">📊</span>
+          <span class="nav-text">Dashboard</span>
+        </a>
+        <a href="orders.html" class="nav-item">
+          <span class="nav-icon">📋</span>
+          <span class="nav-text">Orders</span>
+        </a>
+        <a href="#" class="nav-item">
+          <span class="nav-icon">🔧</span>
+          <span class="nav-text">Services</span>
+        </a>
+        <a href="#" class="nav-item">
+          <span class="nav-icon">👥</span>
+          <span class="nav-text">Customers</span>
+        </a>
+        <a href="#" class="nav-item">
+          <span class="nav-icon">👔</span>
+          <span class="nav-text">Technicians</span>
+        </a>
+        <a href="#" class="nav-item">
+          <span class="nav-icon">💳</span>
+          <span class="nav-text">Payments</span>
+        </a>
+        <a href="#" class="nav-item">
+          <span class="nav-icon">⭐</span>
+          <span class="nav-text">Reviews</span>
+        </a>
+        <a href="#" class="nav-item">
+          <span class="nav-icon">📊</span>
+          <span class="nav-text">Reports</span>
+        </a>
+        <a href="#" class="nav-item">
+          <span class="nav-icon">⚙️</span>
+          <span class="nav-text">Settings</span>
+        </a>
+        <a href="#" class="nav-item">
+          <span class="nav-icon">🚪</span>
+          <span class="nav-text">Logout</span>
+        </a>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Topbar -->
+      <header id="topbar" class="topbar">
+        <div class="topbar-left">
+          <input type="text" class="search-input" placeholder="Search...">
+          <span class="search-icon">🔍</span>
+        </div>
+        <div class="topbar-right">
+          <button class="topbar-icon">🔔</button>
+          <button class="topbar-icon">👤</button>
+          <button class="topbar-icon">⚙️</button>
+        </div>
+      </header>
+
+      <!-- Dashboard Content -->
+      <div class="content">
+        <!-- Stats Cards -->
+        <div class="stats-grid">
+          <div id="total-orders-card" class="stat-card">
+            <div class="stat-icon">📦</div>
+            <div class="stat-content">
+              <h3 class="stat-title">Total Orders</h3>
+              <span class="stat-value">4,367</span>
+            </div>
+          </div>
+          <div id="revenue-card" class="stat-card">
+            <div class="stat-icon">💰</div>
+            <div class="stat-content">
+              <h3 class="stat-title">Revenue</h3>
+              <span class="stat-value">7.8k</span>
+            </div>
+          </div>
+          <div id="pending-orders-card" class="stat-card">
+            <div class="stat-icon">⏳</div>
+            <div class="stat-content">
+              <h3 class="stat-title">Pending Orders</h3>
+              <span class="stat-value">36</span>
+            </div>
+          </div>
+          <div id="active-technicians-card" class="stat-card">
+            <div class="stat-icon">👨‍🔧</div>
+            <div class="stat-content">
+              <h3 class="stat-title">Active Technicians</h3>
+              <span class="stat-value">36</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Top Services -->
+        <div id="top-services" class="card">
+          <h2 class="card-title">Top Services</h2>
+          <div class="services-list">
+            <div class="service-item">
+              <span>AC Installation & Maintenance</span>
+              <span class="service-count">156 orders</span>
+            </div>
+            <div class="service-item">
+              <span>Electrical Repairs</span>
+              <span class="service-count">142 orders</span>
+            </div>
+            <div class="service-item">
+              <span>Plumbing Services</span>
+              <span class="service-count">128 orders</span>
+            </div>
+            <div class="service-item">
+              <span>Door & Window Repair</span>
+              <span class="service-count">115 orders</span>
+            </div>
+            <div class="service-item">
+              <span>Painting & Decoration</span>
+              <span class="service-count">98 orders</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Recent Orders Table -->
+        <div class="card">
+          <h2 class="card-title">Recent Orders list</h2>
+          <div class="table-container">
+            <table id="recent-orders-table">
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Order ID</th>
+                  <th>Status</th>
+                  <th>Name</th>
+                  <th>Payment</th>
+                  <th>Number</th>
+                  <th>Services</th>
+                  <th>Address</th>
+                </tr>
+              </thead>
+              <tbody id="recent-orders-body">
+                <!-- Data will be populated by JavaScript -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

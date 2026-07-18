@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Orders - FixCent Admin Dashboard</title>
+  <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Sidebar -->
+    <aside id="sidebar" class="sidebar">
+      <div class="sidebar-header">
+        <div class="logo">FIX CENT</div>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="dashboard.html" class="nav-item">
+          <span class="nav-icon">📊</span>
+          <span class="nav-text">Dashboard</span>
+        </a>
+        <a href="orders.html" class="nav-item active">
+          <span class="nav-icon">📋</span>
+          <span class="nav-text">Orders</span>
+        </a>
+        <a href="#" class="nav-item">
+          <span class="nav-icon">🔧</span>
+          <span class="nav-text">Services</span>
+        </a>
+        <a href="#" class="nav-item">
+          <span class="nav-icon">👥</span>
+          <span class="nav-text">Customers</span>
+        </a>
+        <a href="#" class="nav-item">
+          <span class="nav-icon">👔</span>
+          <span class="nav-text">Technicians</span>
+        </a>
+        <a href="#" class="nav-item">
+          <span class="nav-icon">💳</span>
+          <span class="nav-text">Payments</span>
+        </a>
+        <a href="#" class="nav-item">
+          <span class="nav-icon">⭐</span>
+          <span class="nav-text">Reviews</span>
+        </a>
+        <a href="#" class="nav-item">
+          <span class="nav-icon">📊</span>
+          <span class="nav-text">Reports</span>
+        </a>
+        <a href="#" class="nav-item">
+          <span class="nav-icon">⚙️</span>
+          <span class="nav-text">Settings</span>
+        </a>
+        <a href="#" class="nav-item">
+          <span class="nav-icon">🚪</span>
+          <span class="nav-text">Logout</span>
+        </a>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Topbar -->
+      <header id="topbar" class="topbar">
+        <div class="topbar-left">
+          <input type="text" class="search-input" placeholder="Search...">
+          <span class="search-icon">🔍</span>
+        </div>
+        <div class="topbar-right">
+          <button class="topbar-icon">🔔</button>
+          <button class="topbar-icon">👤</button>
+          <button class="topbar-icon">⚙️</button>
+        </div>
+      </header>
+
+      <!-- Orders Content -->
+      <div class="content">
+        <div class="card">
+          <h2 class="card-title">Orders</h2>
+          <div class="table-container">
+            <table id="orders-table">
+              <thead>
+                <tr>
+                  <th>Order ID</th>
+                  <th>Customer Name</th>
+                  <th>Address</th>
+                  <th>Phone</th>
+                  <th>Date & Time</th>
+                  <th>Status</th>
+                  <th>Payment Method</th>
+                  <th>Service</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="orders-body">
+                <!-- Data will be populated by JavaScript -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>
